@@ -1,6 +1,6 @@
 3.2.10 (Media Mark)
-30f0f2d5803299631bab10b29499ae9c7b13d69a
-o:Sass::Tree::RootNode	:@template"-|@import compass/css3
+7538b79ca3bfa6750c49007e35432e9c88132212
+o:Sass::Tree::RootNode	:@template".|@import compass/css3
 @import placeholderText
 
 .container
@@ -1385,6 +1385,7 @@ footer
           a
             @include background-image(linear-gradient(bottom, #ff8511 -0.54%, #ffd700 53.27%, #ffe300 92.94%, #ff9000 99.46%))
             +box-shadow(none)
+
 
 :@options{ :@has_childrenT:@children[Bo:Sass::Tree::ImportNode;0;@:@imported_filename"compass/css3:
 @linei:@filename"@/Users/romanleonenko/dom-otvetov/app/assets/sass/style.sass;	[ :@imported_file0o;
