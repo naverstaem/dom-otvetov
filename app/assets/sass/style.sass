@@ -1100,43 +1100,41 @@ header
         margin-top: 35px
         padding: 5px 10px
 
+.social
+  margin-top: 5px
 
+  ul
+    padding: 0
+    margin: 0
+    list-style: none
+
+    &:after
+      content: ''
+      clear: both
+
+    li
+      float: left
+
+      a
+        width: 34px
+        height: 35px
+        display: inline-block
+        @include box-shadow(1px 2px 2px rgba(0,0,0,.75))
+        @include background-image(linear-gradient(bottom, #ff8511 -0.54%, #ffd700 53.27%, #ffe300 92.94%, #ff9000 99.46%))
+        text-align: center
+        margin: 0 1px
+
+        img
+          margin-top: 9px
+          display: inline-block
+
+        &:hover
+          background-color: #989898
+          background-image: none
+          +box-shadow(none)
 
 footer
   padding: 15px 0
-
-  .social
-    margin-top: 5px
-
-    ul
-      padding: 0
-      margin: 0
-      list-style: none
-
-      &:after
-        content: ''
-        clear: both
-
-      li
-        float: left
-
-        a
-          width: 34px
-          height: 35px
-          display: inline-block
-          @include box-shadow(1px 2px 2px rgba(0,0,0,.75))
-          @include background-image(linear-gradient(bottom, #ff8511 -0.54%, #ffd700 53.27%, #ffe300 92.94%, #ff9000 99.46%))
-          text-align: center
-          margin: 0 1px
-
-          img
-            margin-top: 9px
-            display: inline-block
-
-          &:hover
-            background-color: #989898
-            background-image: none
-            +box-shadow(none)
 
   .menu-block
 
@@ -1214,4 +1212,175 @@ footer
   .new-answers
     .col-md-4
       margin-bottom: 45px
-        
+    
+  .big-title
+    background: transparent !important
+    margin-bottom: 0
+
+.center-block
+  background: #ececec
+  border-bottom: 1px #c4c4c4 solid
+
+  .content-block
+    border: 1px solid #d4d4d4
+    @include box-shadow(0 0 9px rgba(0,0,0,.12))
+    border-bottom: none
+    border-top: none
+    background: #fff
+    padding-bottom: 15px
+    text-align: center
+
+  .big-title
+    background: url("../img/big-title-bg.png") no-repeat
+    +background-size(100% 100%)
+    min-height: 69px
+    text-align: left
+
+    h2
+      display: inline-block
+      margin-left: 25px
+      margin-top: 18px
+
+  .category-items
+    text-align: left
+
+    .big-title
+      margin-bottom: 20px
+
+    .item-block
+      .panel
+        position: relative
+        z-index: 9
+        margin-bottom: 40px
+
+      .panel-body
+        p
+          color: #626262
+          font-family: "Calibri"
+          font-size: 15px
+
+        .category-block-meta-data
+          float: right
+
+          span
+            color: #626262
+            font-family: "Calibri"
+            font-size: 13px
+
+      .read-more
+        width: 157px
+        height: 35px
+        border: 1px solid rgba(72, 72, 72, 0.24)
+        @include border-bottom-radius(6px)
+        background-color: #f5f5f5
+        @include box-shadow(inset 0 2px 0 #fff)
+        display: inline-block
+        text-align: center
+        float: right
+        position: relative
+        top: -45px
+        padding-top: 7px
+        color: #0d8fd2
+        font-family: "Calibri"
+        font-size: 14px
+        font-style: italic
+        text-decoration: underline
+
+  .breadcrumb
+    margin-bottom: 0
+    text-align: left
+
+  .pagination
+    margin-top: -15px
+
+  .experts
+    padding-bottom: 5px
+    
+  .sidebar
+    padding-top: 15px
+
+    .nav-stacked
+      border: 1px solid rgba(72,72,72,.24)
+      @include border-radius(7px)
+      background-color: #f5f5f5
+      @include box-shadow(inset 0 2px 0 #fff)
+      margin-bottom: 15px
+
+      li
+        border-bottom: 1px #e4e4e4 solid
+
+        &:hover, &.active
+          a
+            background-color: #19addd !important
+            color: #ffffff !important
+
+        &:first-child
+          a
+            +border-top-radius(5px)
+
+        &:last-child
+          border-bottom: none
+
+          a
+            +border-bottom-radius(5px)
+
+        a
+          color: #636363
+          font-family: "Calibri"
+          font-size: 14px
+          padding: 7px 15px
+
+
+    .social-block
+      border: 1px solid rgba(72,72,72,.24)
+      @include border-radius(6px)
+      background-color: #f5f5f5
+      @include box-shadow(inset 0 2px 0 #fff)
+      text-align: center
+      padding-bottom: 5px
+
+    .social
+      .nav-tabs
+        border-bottom: none
+        display: inline-block
+
+      .blue-title
+        background: #1aaede
+        padding: 15px 0
+        margin: 5px 0 10px 0
+
+        h2
+          margin: 0
+          color: #fff
+          font-family: "Calibri"
+          font-size: 16px
+          text-transform: capitalize
+
+
+      a
+        width: 30px
+        height: 32px
+        display: inline-block
+        @include box-shadow(1px 2px 2px rgba(0,0,0,.75))
+        background-image: none
+        background-color: #989898
+        text-align: center
+        padding: 0
+        +border-radius(0)
+        border: none
+        margin: 5px
+
+        img
+          margin-top: 7px
+          display: inline-block
+
+        &:hover
+          @include background-image(linear-gradient(bottom, #ff8511 -0.54%, #ffd700 53.27%, #ffe300 92.94%, #ff9000 99.46%))
+          +box-shadow(none)
+
+      li
+        &.active
+          a
+            @include background-image(linear-gradient(bottom, #ff8511 -0.54%, #ffd700 53.27%, #ffe300 92.94%, #ff9000 99.46%))
+            +box-shadow(none)
+
