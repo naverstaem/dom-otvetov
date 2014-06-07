@@ -1,0 +1,35 @@
+{
+  "name": "validate.js",
+  "main": [
+    "validate.js",
+    "validate.min.js"
+  ],
+  "version": "0.1.3",
+  "ignore": [
+    "**/.*",
+    "CNAME",
+    "docs",
+    "spec",
+    "*.md",
+    "*.html",
+    "Gruntfile.js",
+    "package.json",
+    "bower.json"
+  ],
+  "keywords": [
+    "validation",
+    "javascript",
+    "library"
+  ],
+  "homepage": "https://github.com/wrapp/validate.js",
+  "_release": "0.1.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.1.3",
+    "commit": "b8e4664c184cd9d7a44f86c2043c5bb4be10afa5"
+  },
+  "_source": "git://github.com/wrapp/validate.js.git",
+  "_target": "~0.1.3",
+  "_originalSource": "validate",
+  "_direct": true
+}

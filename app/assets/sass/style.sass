@@ -1,0 +1,1217 @@
+@import compass/css3
+@import placeholderText
+
+.container
+  max-width: 880px
+
+body
+  background: #f8f8f8
+
+*
+  outline: none !important
+
+.wrapper
+  width: 1024px
+  margin: 0 auto
+  position: relative
+
+.fl
+  float: left
+
+.fr
+  float: right
+
+.cb
+  clear: both
+
+label.error
+  display: none !important
+
+input.error, textarea.error
+  box-shadow: 0 0 5px red !important
+
+.form_reset
+  padding: 0 !important
+  background-color: transparent !important
+  -webkit-box-shadow: none !important
+  -moz-box-shadow: none !important
+  box-shadow: none !important
+
+.dropdown
+  &.open
+    .caret
+      background: url("../img/dropdowns-opened-lines.png") no-repeat
+      top: 1px
+  > a
+    border: 1px solid rgba(72, 72, 72, 0.24)
+    +border-radius(7px)
+    +background-clip(padding-box)
+    background-color: whitesmoke
+    +box-shadow(inset 0 2px 0 white)
+    +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.1) 21.59%, rgba(54, 54, 54, 0.1) 65.43%, rgba(95, 95, 95, 0.1) 65.43%, rgba(177, 177, 177, 0.1) 148.59%))
+    display: inline-block
+    padding: 4px 15px
+    color: #676767
+    font-family: "Calibri"
+    font-size: 15px
+    font-weight: normal
+    text-transform: uppercase
+    text-decoration: none
+    position: relative
+    padding-right: 45px
+    width: 260px
+    .caret
+      background: url("../img/dropdowns-closed-lines.png") no-repeat
+      width: 32px
+      height: 30px
+      display: inline-block
+      border: none
+      margin: 0
+      padding: 0
+      right: -1px
+      top: 0
+      position: absolute
+  ul
+    list-style: none
+    &.dropdown-menu
+      ul
+        display: none
+  .dropdown-menu
+    +border-radius(5px)
+    background-color: #c1c1c1
+    +box-shadow(none)
+    border: none
+    padding: 5px
+    li
+      a
+        border-top: 1px solid rgba(72, 72, 72, 0.24)
+        background-color: whitesmoke !important
+        +box-shadow(inset 0 2px 0 white)
+        width: 255px
+        display: inline-block
+        padding: 5px 13px
+      &:first-child
+        a
+          +border-top-radius(5px)
+      &:last-child
+        a
+          +border-bottom-radius(5px)
+      &:hover
+        > a
+          background-color: #19addd !important
+          color: white
+          +box-shadow(none)
+          float: left
+        ul
+          display: block
+          float: left
+          position: absolute
+          right: -260px
+          top: 0
+          padding: 5px
+          background-color: #c1c1c1
+          +border-right-radius(5px)
+          a
+            padding: 5px 13px
+            color: black
+            text-decoration: none
+            &:hover
+              color: white
+        &:after
+          content: ""
+          display: block
+          clear: both
+
+.btn-group
+  button
+    border: 1px solid rgba(72, 72, 72, 0.24)
+    background-color: white
+    +box-shadow(inset 0 2px 0 white)
+    +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.1) 21.59%, rgba(54, 54, 54, 0.1) 65.43%, rgba(95, 95, 95, 0.1) 65.43%, rgba(177, 177, 177, 0.1) 148.59%))
+    color: #0d8fd2
+    font-family: "Calibri"
+    font-size: 14px
+    +text-shadow(0 1px 0 white)
+    min-width: 120px
+    height: 38px
+    &:focus
+      background-color: #08c2fe
+      +box-shadow(inset 0 2px 0 #0094c6)
+      color: white
+      +text-shadow(none)
+
+//      Buttons styles
+
+.btn-success
+  &.btn-lg
+    background: url("../img/top-green-btn.png") no-repeat
+    width: 213px
+    height: 47px
+    border: none
+    padding: 0
+    margin: 0
+    text-align: center
+    color: white
+    font-family: "Calibri"
+    font-size: 24px
+    font-weight: bold
+    +text-shadow(1px 2px 0 rgba(0, 0, 0, 0.13))
+    text-transform: uppercase
+    padding-top: 14px
+    &:focus
+      +box-shadow(inset 3px 3px 5px rgba(black, 0.5))
+
+.btn-info
+  width: 106px
+  height: 30px
+  +border-radius(6px)
+  background-color: #00c0ff
+  +box-shadow(inset 0 2px 0 #62d7ff)
+  +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.23) 21.59%, rgba(54, 54, 54, 0.23) 65.43%, rgba(95, 95, 95, 0.23) 65.43%, rgba(177, 177, 177, 0.23) 148.59%))
+  color: white
+  font-family: "Calibri"
+  font-size: 14px
+  line-height: 15px
+  font-weight: bold
+  text-transform: uppercase
+  &:hover
+    +box-shadow(inset 0 2px 0 #62d7ff)
+    +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.12) 21.59%, rgba(54, 54, 54, 0.12) 65.43%, rgba(95, 95, 95, 0.12) 65.43%, rgba(177, 177, 177, 0.12) 148.59%))
+  &:focus
+    +box-shadow(inset 0 2px 0 #0094c6)
+    +background-image(linear-gradient(bottom, rgba(177, 177, 177, 0.1) 21.59%, rgba(95, 95, 95, 0.1) 60.93%, rgba(54, 54, 54, 0.1) 60.93%, rgba(0, 1, 1, 0.1) 148.59%))
+
+.btn-primary
+  width: 106px
+  height: 30px
+  border: 1px solid rgba(72, 72, 72, 0.24)
+  +border-radius(7px)
+  background-color: white
+  +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.1) 21.59%, rgba(54, 54, 54, 0.1) 65.43%, rgba(95, 95, 95, 0.1) 65.43%, rgba(177, 177, 177, 0.1) 148.59%))
+  +box-shadow(inset 0 2px 0 white, 0 1px 1px rgba(black, 0.4))
+  font-family: "Calibri"
+  color: #9b9b9b
+  font-size: 14px
+  line-height: 15px
+  font-weight: bold
+  text-transform: uppercase
+  +text-shadow(0 1px 0 white)
+  &:hover
+    +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.1) 21.59%, rgba(54, 54, 54, 0.1) 65.43%, rgba(95, 95, 95, 0.1) 65.43%, rgba(177, 177, 177, 0.1) 148.59%))
+    background-color: white
+    border: 1px #e3e3e3 solid
+    font-family: "Calibri"
+    color: #9b9b9b
+    font-size: 14px
+  &:focus
+    border: 1px solid rgba(72, 72, 72, 0.24)
+    +border-radius(7px)
+    background-color: white
+    +box-shadow(inset 0 2px 0 white)
+    +background-image(linear-gradient(bottom, rgba(177, 177, 177, 0.06) 21.59%, rgba(95, 95, 95, 0.06) 65.77%, rgba(54, 54, 54, 0.06) 65.77%, rgba(0, 1, 1, 0.06) 148.59%))
+    font-family: "Calibri"
+    color: #9b9b9b
+    font-size: 14px
+
+.btn-success
+  width: 106px
+  height: 30px
+  border: 1px solid rgba(72, 72, 72, 0.24)
+  +border-radius(7px)
+  +background-clip(padding-box)
+  background-color: #8fd513
+  +box-shadow(inset 0 2px 0 rgba(255, 255, 255, 0.4))
+  +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.1) 21.59%, rgba(54, 54, 54, 0.1) 65.43%, rgba(95, 95, 95, 0.1) 65.43%, rgba(177, 177, 177, 0.1) 148.59%))
+  font-family: "Calibri"
+  color: white
+  font-size: 14px
+  line-height: 15px
+  font-weight: bold
+  text-transform: uppercase
+  +text-shadow(1px 2px 0 rgba(0, 0, 0, 0.13))
+  &:hover
+    +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.1) 21.59%, rgba(54, 54, 54, 0.1) 65.43%, rgba(95, 95, 95, 0.1) 65.43%, rgba(177, 177, 177, 0.1) 148.59%))
+    background-color: #8fd513
+    border: 1px #e3e3e3 solid
+  &:focus
+    +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.1) 21.59%, rgba(54, 54, 54, 0.1) 65.43%, rgba(95, 95, 95, 0.1) 65.43%, rgba(177, 177, 177, 0.1) 148.59%))
+    background-color: #8fd513
+    border: 1px #e3e3e3 solid
+
+.btn-warning
+  width: 106px
+  height: 30px
+  border: 1px solid rgba(72, 72, 72, 0.24)
+  +border-radius(7px)
+  +background-clip(padding-box)
+  background-color: #ff9a2d
+  +box-shadow(inset 0 2px 0 rgba(255, 255, 255, 0.4))
+  +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.1) 21.59%, rgba(54, 54, 54, 0.1) 65.43%, rgba(95, 95, 95, 0.1) 65.43%, rgba(177, 177, 177, 0.1) 148.59%))
+  font-family: "Calibri"
+  color: white
+  font-size: 14px
+  line-height: 15px
+  font-weight: bold
+  text-transform: uppercase
+  +text-shadow(1px 2px 0 rgba(0, 0, 0, 0.13))
+  &:hover
+    +box-shadow(inset 0 2px 0 rgba(255, 255, 255, 0.4))
+    +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.1) 21.59%, rgba(54, 54, 54, 0.1) 65.43%, rgba(95, 95, 95, 0.1) 65.43%, rgba(177, 177, 177, 0.1) 148.59%))
+  &:focus
+    +box-shadow(inset 0 2px 0 rgba(255, 255, 255, 0.4))
+    +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.1) 21.59%, rgba(54, 54, 54, 0.1) 65.43%, rgba(95, 95, 95, 0.1) 65.43%, rgba(177, 177, 177, 0.1) 148.59%))
+
+.btn-danger
+  width: 106px
+  height: 30px
+  border: 1px solid rgba(72, 72, 72, 0.24)
+  +border-radius(7px)
+  background-color: #ed1c24
+  +box-shadow(inset 0 2px 0 rgba(255, 255, 255, 0.4))
+  +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.1) 21.59%, rgba(54, 54, 54, 0.1) 65.43%, rgba(95, 95, 95, 0.1) 65.43%, rgba(177, 177, 177, 0.1) 148.59%))
+  font-family: "Calibri"
+  color: white
+  font-size: 14px
+  line-height: 15px
+  font-weight: bold
+  text-transform: uppercase
+  +text-shadow(1px 2px 0 rgba(0, 0, 0, 0.13))
+  &:hover
+    +box-shadow(inset 0 2px 0 rgba(255, 255, 255, 0.4))
+    +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.1) 21.59%, rgba(54, 54, 54, 0.1) 65.43%, rgba(95, 95, 95, 0.1) 65.43%, rgba(177, 177, 177, 0.1) 148.59%))
+  &:focus
+    +box-shadow(inset 0 2px 0 rgba(255, 255, 255, 0.4))
+    +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.1) 21.59%, rgba(54, 54, 54, 0.1) 65.43%, rgba(95, 95, 95, 0.1) 65.43%, rgba(177, 177, 177, 0.1) 148.59%))
+
+.left-right-inputs
+  position: relative
+  &:after
+    content: ""
+    display: block
+    background: #e1e1e1
+    width: 1px
+    height: 40px
+    position: absolute
+    left: 50%
+    margin-left: -1px
+    z-index: 99
+    margin-top: 10px
+  input
+    +background-size(100% 100%)
+    &.left-item
+      background: url("../img/input-groups-left-input.png") no-repeat
+      border: none
+      height: 60px
+      +box-shadow(none)
+      text-align: center
+      width: 210px
+      color: #545454
+      font-family: "Calibri"
+      font-size: 16px
+      padding-left: 30px
+      +input-placeholder
+        color: #545454
+    &.right-item
+      background: url("../img/input-groups-right-input.png") no-repeat
+      border: none
+      height: 60px
+      +box-shadow(none)
+      text-align: center
+      width: 210px
+      color: #545454
+      font-family: "Calibri"
+      font-size: 16px
+      padding-right: 30px
+      +input-placeholder
+        color: #545454
+
+.nav-tabs
+  padding-left: 25px
+  border-bottom: 1px solid #1ac0f6
+  li
+    a
+      border: 1px solid rgba(72, 72, 72, 0.24)
+      +background-clip(padding-box)
+      background-color: white
+      +box-shadow(inset 0 2px 0 white)
+      +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.1) 21.59%, rgba(54, 54, 54, 0.1) 65.43%, rgba(95, 95, 95, 0.1) 65.43%, rgba(177, 177, 177, 0.1) 148.59%))
+      +border-radius(0px)
+      margin-right: 0
+      color: #0d8fd2
+      font-family: "Calibri"
+      font-size: 15px
+      +text-shadow(0 1px 0 white)
+    &:first-child
+      a
+        +border-top-left-radius(5px)
+    &:last-child
+      a
+        +border-top-right-radius(5px)
+    &:hover
+      a
+        border-color: rgba(72, 72, 72, 0.24)
+        border-bottom: none !important
+  .active
+    a
+      background-color: #08c2fe !important
+      +box-shadow(inset 0 2px 0 #0094c6)
+      +background-image(linear-gradient(bottom, rgba(177, 177, 177, 0.1) 21.59%, rgba(95, 95, 95, 0.1) 60.93%, rgba(54, 54, 54, 0.1) 60.93%, rgba(0, 1, 1, 0.1) 148.59%))
+      color: white !important
+      font-family: "Calibri"
+      font-size: 14px
+      border: none !important
+      height: 42px
+      +text-shadow(none)
+
+.breadcrumb
+  background-color: transparent
+  padding-left: 0
+  li
+    &:before
+      content: "\003e \003e" !important
+      color: #0d90d3 !important
+    &:first-child
+      &:before
+        content: ""
+        display: none
+
+.pagination
+  a
+    border: 1px solid rgba(72, 72, 72, 0.24)
+    background-color: white
+    +box-shadow(inset 0 2px 0 white)
+    +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.1) 21.59%, rgba(54, 54, 54, 0.1) 65.43%, rgba(95, 95, 95, 0.1) 65.43%, rgba(177, 177, 177, 0.1) 148.59%))
+    color: #a6a6a6 !important
+    &:hover
+      border: 1px solid #0095c5 !important
+      background-color: deepskyblue !important
+      color: white !important
+      +box-shadow(inset 0 2px 0 #0094c6)
+      +background-image(linear-gradient(bottom, rgba(177, 177, 177, 0.1) 21.59%, rgba(95, 95, 95, 0.1) 60.93%, rgba(54, 54, 54, 0.1) 60.93%, rgba(0, 1, 1, 0.1) 148.59%))
+  .active
+    a
+      border: 1px solid #0095c5 !important
+      background-color: deepskyblue !important
+      color: white !important
+      +box-shadow(inset 0 2px 0 #0094c6)
+      +background-image(linear-gradient(bottom, rgba(177, 177, 177, 0.1) 21.59%, rgba(95, 95, 95, 0.1) 60.93%, rgba(54, 54, 54, 0.1) 60.93%, rgba(0, 1, 1, 0.1) 148.59%))
+
+.label-success
+  background-color: #79cd11
+
+h2
+  font-weight: normal
+  text-transform: uppercase
+  color: #0d8fd2
+  font-family: "Calibri"
+  font-size: 25px
+  .label
+    margin-left: 10px
+
+h4
+  color: #0d8fd2
+  font-family: "Arial"
+  font-size: 16px
+  font-weight: bold
+  .label
+    margin-left: 10px
+
+.nav-pills
+  li
+    border: 1px solid rgba(72, 72, 72, 0.24)
+    border-left: 0
+    background-color: white
+    +box-shadow(inset 0 2px 0 white)
+    +background-image(linear-gradient(bottom, rgba(0, 1, 1, 0.1) 21.59%, rgba(54, 54, 54, 0.1) 65.43%, rgba(95, 95, 95, 0.1) 65.43%, rgba(177, 177, 177, 0.1) 148.59%))
+    margin: 0 !important
+    a
+      color: #9b9b9b
+      font-family: "Calibri"
+      font-size: 13px
+      +text-shadow(0 1px 0 white)
+      min-height: 35px
+      padding-bottom: 5px
+    &:first-child
+      border-left: 1px solid rgba(72, 72, 72, 0.24)
+      +border-left-radius(5px)
+    &:last-child
+      +border-right-radius(5px)
+    .badge
+      background: url("../img/badge-bg.png") no-repeat
+      width: 22px
+      height: 19px
+      text-align: center
+      color: #0095c5
+      font-family: "Arial"
+      font-size: 10px
+      padding: 0
+      padding-top: 4px
+
+.jumbotron
+  background: #fff4c2 url("../img/jumbotron.png") left bottom no-repeat
+  +background-size(cover)
+  border: 1px solid #10c5ff
+  +border-radius(0 !important)
+  h1
+    color: #0d8fd2
+    font-family: "Calibri"
+    font-size: 35px
+    margin-top: 0
+  p
+    color: #626262
+    font-family: "Calibri"
+    font-size: 16px
+  .btn
+    padding-top: 10px
+
+.page-header
+  border-bottom: none
+  h1
+    color: #0d8fd2
+    font-family: "Calibri"
+    font-size: 25px
+    text-transform: uppercase
+    small
+      color: #626262
+      font-family: "Arial"
+      font-size: 14px
+
+.thumbnail
+  border: 5px #ffba00 solid
+  +border-radius(0)
+  position: relative
+  padding: 0
+  &:after
+    content: ""
+    display: inline-block
+    background: url("../img/thumbnails-shadow.png") center no-repeat
+    +background-size(cover)
+    width: 100%
+    height: 20px
+    position: absolute
+    bottom: -25px
+
+// Alerts
+
+.alert
+  background-color: transparent
+  border: none
+  font-family: "Arial"
+  font-size: 14px
+  img
+    margin-right: 10px
+
+.alert-success
+  color: red
+
+.alert-info
+  color: red
+
+.alert-warning
+  color: #79cc12
+
+.alert-danger
+  color: #626262
+
+//  Progress bar
+
+.progress
+  border: 1px solid #7f7f7f
+  overflow: visible
+  +border-radius(6px)
+  background-color: #c4c4c4
+  +box-shadow(inset 0 1px 0 rgba(28, 28, 28, 0.07))
+  +background-image(linear-gradient(bottom, rgba(177, 177, 177, 0.1) 21.59%, rgba(95, 95, 95, 0.1) 60.93%, rgba(54, 54, 54, 0.1) 60.93%, rgba(0, 1, 1, 0.1) 148.59%))
+
+.progress-bar
+  background: url("../img/progress-line.png") 0 -2px repeat-x
+  +background-size(auto 120%)
+  +border-radius(5px)
+  position: relative
+  .bubble
+    background: url("../img/progress-bubble.png") no-repeat
+    width: 49px
+    height: 34px
+    display: inline-block
+    position: absolute
+    right: -24px
+    top: -35px
+    z-index: 9
+    color: #626262
+    font-family: "Calibri"
+    font-size: 12px
+    padding-top: 3px
+
+.panel-default
+  border: 1px solid rgba(72, 72, 72, 0.24)
+  +border-radius(6px)
+  +background-clip(padding-box)
+  background-color: whitesmoke
+  +box-shadow(inset 0 2px 0 white)
+  .panel-heading
+    +border-top-radius(6px)
+    background-color: whitesmoke
+    +box-shadow(inset 0 2px 0 white)
+    border-bottom: 1px #c6c6c6 solid
+    color: #0d8fd2
+    font-family: "Calibri"
+    font-size: 14px
+
+// Table styles
+
+table.table-bordered
+  border: none
+  +border-radius(5px)
+  border-collapse: separate
+  tbody
+    tr
+      &:last-child
+        td
+          border-bottom: 1px solid #dddddd
+      td
+        border-right: none
+        border-bottom: none
+        &:last-child
+          border-right: 1px solid #dddddd
+      &:last-child
+        td
+          &:first-child
+            +border-bottom-left-radius(5px)
+          &:last-child
+            +border-bottom-right-radius(5px)
+  td
+    height: 37px
+    text-align: center
+    color: #626262
+    font-family: "Calibri"
+    font-size: 16px
+  thead
+    background: url("../img/table-header-bg.png") no-repeat
+    +background-size(cover)
+    tr
+      th
+        text-align: center
+        border: none
+        color: #626262
+        font-family: "Calibri"
+        font-size: 16px
+        text-transform: uppercase
+        font-weight: normal
+        &:first-child
+          +border-top-left-radius(5px)
+        &:last-child
+          +border-top-right-radius(5px)
+
+//Forms
+
+.form-inline
+  .form-group
+    margin-left: -45px
+    input
+      background: url("../img/little-tr-form.png") no-repeat
+      width: 185px !important
+      height: 60px
+      border: none
+      +box-shadow(none)
+      position: relative
+      &:focus
+        +box-shadow(none)
+    &:first-child
+      input
+        padding-left: 30px
+    input
+      padding-left: 50px
+    &:first-child
+      margin-left: -10px
+      position: relative
+      z-index: 1
+  button
+    background: url("../img/forms-horisontal-button.png") no-repeat
+    width: 162px
+    height: 36px
+    border: none
+    margin-left: -40px
+    color: white
+    font-family: "Calibri"
+    font-size: 16px
+    text-transform: uppercase
+    outline: none !important
+    &:hover
+      background-color: transparent
+      color: white
+  .checkbox
+    color: #777777
+    font-family: "Calibri"
+    font-size: 14px
+    margin-left: 2px
+    input
+      margin-right: 5px
+  .pass-forget
+    color: #0d8fd2
+    font-family: "Calibri"
+    font-size: 14px
+    text-decoration: underline
+    margin-left: 25px
+
+.form-horizontal
+  .control-label
+    text-align: left
+    padding-top: 18px
+  .input-block
+    position: relative
+    &:before
+      content: ""
+      display: inline-block
+      background: url("../img/input-x-left.png") no-repeat
+      width: 29px
+      height: 60px
+      position: absolute
+      left: -14px
+      top: 0
+    &:after
+      content: ""
+      display: inline-block
+      background: url("../img/input-x-right.png") no-repeat
+      width: 29px
+      height: 60px
+      position: absolute
+      right: -14px
+      top: 0
+    input
+      background: url("../img/input-x-bg.png") repeat-x
+      height: 60px
+      border: none
+      +box-shadow(none)
+      &:focus
+        +box-shadow(none)
+  .checkbox
+    color: #777777
+    font-family: "Calibri"
+    font-size: 14px
+    margin-left: 2px
+    input
+      margin-right: 5px
+  button
+    background: url("../img/forms-vertical-button.png") no-repeat
+    width: 168px
+    height: 36px
+    border: none
+    color: white
+    font-family: "Calibri"
+    font-size: 16px
+    text-transform: uppercase
+    outline: none !important
+    &:hover
+      background-color: transparent
+      color: white
+
+.img-thumbnail
+  border: 1px solid #19addd
+  +border-radius(0)
+
+.media-objects
+  .object-block
+    margin-left: 70px
+    img
+      max-width: 100%
+    &:first-child
+      margin-left: 0
+  .objects
+    border: 1px solid rgba(72, 72, 72, 0.24)
+    +border-radius(6px)
+    background-color: whitesmoke
+    +box-shadow(inset 0 2px 0 white)
+    padding: 15px
+    margin-bottom: 20px
+    h3
+      color: #545454
+      font-family: "Calibri"
+      font-size: 16px
+      font-weight: bold
+      text-transform: uppercase
+      margin-top: 15px
+    p
+      color: #777777
+      font-family: "Calibri"
+      font-size: 14px
+
+.gray-bg
+  background: url("../img/gray-bg.png")
+
+.yellow-bg
+  background: url("../img/yellow-pattern.png") center no-repeat
+  +background-size(cover)
+  text-align: center
+
+  .title
+    background: url("../img/title-bg.png") 0 -4px no-repeat
+    width: 462px
+    height: 65px
+    display: inline-block
+    color: #0d8fd2
+    font-family: "Calibri"
+    font-size: 25px
+
+header
+
+  .menu-search
+    text-align: left
+    padding: 10px 0 9px
+
+    h2
+      color: #363636
+      font-family: "Calibri"
+      font-size: 20px
+      margin-top: 5px
+      margin-bottom: 0
+      position: relative
+      text-align: center
+      font-weight: normal
+      text-transform: capitalize
+
+      .triangle
+        background: url("../img/white-triangle.png") top center no-repeat
+        display: inline-block
+        width: 31px
+        height: 14px
+        position: absolute
+        left: 50%
+        margin-left: -15px
+        top: -15px
+
+    .dropdown
+      margin-top: 1px
+
+    .search-block
+      .btn-info
+        width: auto
+        height: 34px
+
+  .top
+    background: #fff
+    padding: 10px 0
+
+    .menu-block
+
+      .btn
+        margin-top: 15px
+
+      ul
+        list-style: none
+        padding: 0
+        margin: 0
+
+        li
+          float: left
+          margin-right: 5px
+
+          &:last-child
+            &:after
+              content: ''
+              display: none
+
+          a
+            display: inline-block
+            padding-right: 5px
+            color: #949494
+            font-family: "Calibri"
+            font-size: 15px
+
+          &:after
+            content: '|'
+            color: #949494
+
+
+
+
+.slider-block
+  padding-bottom: 65px
+  padding-top: 15px
+
+  #carousel-example-generic
+    height: 390px
+
+    &:after
+      content: ''
+      display: block
+      background: url("../img/under-slider-shadows.png") bottom center no-repeat
+      +background-size(cover)
+      width: 100%
+      height: 38px
+      position: absolute
+
+  .item
+    position: relative
+    min-height: 390px
+    background: #fff
+
+    .descr
+      position: relative
+      z-index: 9
+      width: 450px
+      margin: 40px
+      display: inline-block
+
+      .title
+        color: #00699b
+        font-family: "Candara"
+        font-size: 25px
+        line-height: 25px
+        font-weight: bold
+        margin-bottom: 25px
+
+        span
+          margin-left: 120px
+          font-size: 30px
+          line-height: 30px
+
+      p
+        color: #545454
+        font-family: "Arial"
+        font-size: 14px
+        margin-right: 140px
+
+    img
+      position: absolute
+      right: 0
+      bottom: 0
+
+  .carousel-inner
+    height: 390px
+
+
+
+  .carousel-control
+    background-image: none
+
+    &.left
+      left: -140px
+
+    &.right
+      right: -140px
+
+  .carousel-indicators
+    bottom: -50px
+
+    li
+      width: 13px
+      height: 13px
+      @include border-radius(7px)
+      @include background-clip(padding-box)
+      background-color: #d1d3d7
+      border: none
+
+      &.active
+        background-color: #1999c9
+
+
+.reviews
+  text-align: center
+  
+  .all-reviews
+    color: #0d8fd2
+    font-family: "Calibri"
+    font-size: 16px
+    font-style: italic
+    text-decoration: underline
+    display: inline-block
+
+  .col-md-6
+    background: url("../img/reviews-block.png") no-repeat
+    +background-size(100% 100%)
+    padding: 30px 20px
+    position: relative
+    text-align: left
+
+    p
+      color: #545454
+      font-family: "Calibri"
+      font-size: 14px
+      line-height: 14px
+      font-style: italic
+
+    .author
+      color: #545454
+      font-family: "Calibri"
+      font-size: 19px
+      font-weight: bold
+      text-transform: uppercase
+
+
+    &:after
+      content: ''
+      display: block
+      background: url("../img/left-sticker.png") no-repeat
+      width: 59px
+      height: 54px
+      position: absolute
+      left: -5px
+      top: -5px
+
+    &:before
+      content: ''
+      display: block
+      background: url("../img/right-sticker.png") no-repeat
+      width: 59px
+      height: 54px
+      position: absolute
+      right: -5px
+      top: -5px
+
+    img
+      +border-radius(50%)
+      margin-bottom: 15px
+
+  >.container
+    padding: 30px 0
+
+.benefits-block
+  padding: 20px 0
+
+  p
+    font-family: "Calibri"
+    color: #555555
+    font-size: 14px
+    margin: 0
+
+    span
+      font-weight: bold
+      font-size: 20px
+      line-height: 20px
+
+    &.i1
+      span
+        color: #3181b9
+
+    &.i2
+      span
+        color: #0d90d3
+
+
+.experts
+  >.container
+    padding-top: 30px
+    text-align: center
+
+
+    .all-reviews
+      color: #0d8fd2
+      font-family: "Calibri"
+      font-size: 16px
+      font-style: italic
+      text-decoration: underline
+      display: inline-block
+      margin: 15px 0
+
+  .item
+    padding: 15px
+    @include border-radius(5px)
+    text-align: center
+    background-color: #fff
+    margin: 10px 0
+
+    strong
+      color: #545454
+      font-family: "Calibri"
+      font-size: 16px
+      font-weight: bold
+      text-transform: uppercase
+      display: inline-block
+      margin: 15px 0
+
+    p
+      color: #777
+      font-family: "Calibri"
+      font-size: 16px
+
+
+  .descr
+    text-align: left
+    color: #555555
+    font-family: "Calibri"
+    font-size: 16px
+
+    h4
+      font-weight: bold
+      color: #555555
+      text-transform: uppercase
+
+    p
+      margin-bottom: 30px
+
+
+.new-answers
+  >.container
+    padding: 20px 0
+
+    .col-md-4
+      >h3
+        color: #00699b
+        font-family: "Calibri"
+        font-size: 18px
+        font-weight: bold
+        text-transform: uppercase
+
+      >p
+        color: #545454
+        font-family: "Arial"
+        font-size: 16px
+
+      .ask-block
+        >p
+          color: #545454
+          font-family: "Arial"
+          font-size: 13px
+
+        .bubble
+          border: 1px solid #949494
+          +border-radius(6px)
+          +box-shadow(1px 1px 2px rgba(black, .5))
+          background-color: #fff
+          padding: 10px 0
+          position: relative
+
+          &:after
+            content: ''
+            display: block
+            clear: both
+
+          &:before
+            content: ''
+            display: block
+            background: url("../img/triangle.png") no-repeat
+            width: 29px
+            height: 30px
+            position: absolute
+            bottom: -30px
+            left: 35px
+
+          p
+            color: #0d8fd2
+            font-family: "Arial"
+            font-size: 13px
+            margin: 0
+
+      .answers
+        border: 1px solid #949494
+        @include border-radius(6px)
+        +box-shadow(1px 1px 2px rgba(black, .5))
+        background-color: #fff
+        margin-top: 35px
+        padding: 5px 10px
+
+
+
+footer
+  padding: 15px 0
+
+  .social
+    margin-top: 5px
+
+    ul
+      padding: 0
+      margin: 0
+      list-style: none
+
+      &:after
+        content: ''
+        clear: both
+
+      li
+        float: left
+
+        a
+          width: 34px
+          height: 35px
+          display: inline-block
+          @include box-shadow(1px 2px 2px rgba(0,0,0,.75))
+          @include background-image(linear-gradient(bottom, #ff8511 -0.54%, #ffd700 53.27%, #ffe300 92.94%, #ff9000 99.46%))
+          text-align: center
+          margin: 0 1px
+
+          img
+            margin-top: 9px
+            display: inline-block
+
+          &:hover
+            background-color: #989898
+            background-image: none
+            +box-shadow(none)
+
+  .menu-block
+
+    .btn
+      margin-top: 15px
+
+    ul
+      list-style: none
+      padding: 0
+      margin: 0
+
+      li
+        float: left
+        margin-right: 5px
+
+        &:last-child
+          &:after
+            content: ''
+            display: none
+
+        a
+          display: inline-block
+          padding-right: 5px
+          color: #949494
+          font-family: "Calibri"
+          font-size: 15px
+
+        &:after
+          content: '|'
+          color: #949494
+
+  .btn-success.btn-lg
+    display: block
+    margin: 0 auto
+
+  .second-line
+    margin-top: 10px
+
+    .text
+      p
+        color: #626262
+        font-family: "Calibri"
+        font-size: 14px
+
+
+@media (max-width: 750px)
+  header
+    .top
+      overflow: hidden
+
+    .menu-search
+      h2
+        display: none
+
+    .search-block
+      margin-top: 7px
+
+  .benefits-block
+    text-align: center
+
+    .col-md-4
+      margin-bottom: 15px
+
+  .yellow-bg
+    .title
+      background-image: none
+      width: auto
+
+      h2
+        color: #000
+
+  .reviews
+    overflow: hidden
+
+  .new-answers
+    .col-md-4
+      margin-bottom: 45px
+        
